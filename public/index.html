@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Svg Ship</title>
+  <meta name="description" content="">
+  <meta name="author" content="Kuba Sulkowski">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!--defs only-->
+<svg display="none">
+  <symbol id="box" viewBox="0,0,50,50">
+    <rect height="50" width="50" fill="red" />
+  </symbol>
+</svg>
+<div class="container">
+  <svg id="fluid" viewBox="0,0,700,450">
+    <defs>
+      <linearGradient id="linear" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C8696" />
+      <stop offset="100%" stop-color="#7c9eab" />
+      </linearGradient>
+      <radialGradient id="radial" cx="50%" cy="50%" r="50%" fx="70%" fy="70%">
+        <stop offset="0%" stop-color="white" />
+        <stop offset="100%" stop-color="#ECB218" />
+      </radialGradient>
+    </defs>
+    <rect x="25" y="25" width="200" height="200" fill="url(#linear)"/>
+    <circle r="100" cx="375" cy="125" fill="url(#radial)" />
+    <use x="450" y="200" width="50" height="50" xlink:href="#box"/>
+  </svg>
+</div>
+
+<script src="js/vendor/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

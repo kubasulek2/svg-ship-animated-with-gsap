@@ -1,0 +1,36 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background: #fafafa;
+  font-size: 100px;
+  color: white;
+  font-family: Roboto, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.container{
+  margin: auto;
+  flex: 0.5 0 400px;
+  width: 60%;
+  height: auto;
+  background: rosybrown;
+  #fluid{
+    width: 100%;
+    height: auto;
+    display: block;
+    //background: red;
+  }
+}
