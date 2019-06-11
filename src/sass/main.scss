@@ -25,12 +25,17 @@ body {
   margin: auto;
   flex: 0.5 0 400px;
   width: 60%;
-  height: auto;
-  background: rosybrown;
   #fluid{
     width: 100%;
     height: auto;
     display: block;
-    //background: red;
+    border: 1px solid royalblue;
+
+
+    #waves-bottom{
+      stroke: royalblue;
+      fill: royalblue;
+      stroke-width: 1px;
+    }
   }
 }
