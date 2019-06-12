@@ -16,22 +16,22 @@
 }
 @keyframes wave-top {
   16.66%{
-    transform: translateX(-41.66%) translateY(-5%);
+    transform: translateX(-41.66%) translateY(-1%);
   }
   33.33%{
-    transform: translateX(-33.33%) translateY(-8%);
+    transform: translateX(-33.33%) translateY(-4%);
   }
   50%{
-    transform: translateX(-25%) translateY(-5%);
+    transform: translateX(-25%) translateY(-1%);
   }
   66.66%{
-    transform: translateX(-16.66%) translateY(-8%);
+    transform: translateX(-16.66%) translateY(-4%);
   }
   83.33%{
-    transform: translateX(-8.33%) translateY(-5%);
+    transform: translateX(-8.33%) translateY(-1%);
   }
   100%{
-    transform: translateX(0) translateY(-8%);
+    transform: translateX(0) translateY(-4%);
   }
 }
 *{
@@ -74,12 +74,12 @@ body {
   //animation: wave-bottom 5s infinite linear;
 }
 #waves-top{
-  transform: translateX(-50%) translateY(-8%);
+  transform: translateX(-50%) translateY(-4%);
   fill: url(#sea-water-dark);
-  //animation: wave-top 7.5s infinite linear;
+  //animation: wave-top 6s infinite linear;
 }
 
-.ship{
+#ship{
 
   #hull{
     fill: url(#hull-paint);

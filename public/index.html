@@ -27,9 +27,27 @@
     <use x="-5" y="-40" xlink:href="#stripe" transform="rotate(43)"/>
     <use x="-5" y="-40" xlink:href="#stripe" transform="rotate(130)"/>
   </symbol>
+  <g id="ship">
+    <g class="hull">
+      <path id="hull" d="M120 440 Q 30 390 20 330 Q260 370 500 360 Q 500 400 460 410 Q 435 420 430 440Z"/>
+      <path id="ribbon"  d="M25.5 350 Q261 390 496.5 380 Q 494.5 386, 490.5 392 Q 261.25 402 32 362 Q28 356 25.5 350Z"/>
+      <use class="buoy" width="60" height="60" x="80" y="340" xlink:href="#buoy"/>
+      <use class="buoy" width="60" height="60" x="380" y="358" xlink:href="#buoy"/>
+    </g>
+    <!--<animateTransform
+            attributeName="transform"
+            dur="5s"
+            type="rotate"
+            values="-3,265,385;3,265,385;-3,265,385"
+
+            fill="freeze"
+            repeatCount="indefinite"
+    />-->
+  </g>
 </svg>
 <div class="container">
   <svg id="fluid" viewBox="0,0,720,450">
+
     <defs>
       <linearGradient id="sea-water-light" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7c9eab" />
@@ -37,7 +55,7 @@
       </linearGradient>
       <linearGradient id="sea-water-dark" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#5C8696" />
-        <stop offset="100%" stop-color="#5b1f1f" />
+        <stop offset="100%" stop-color="#37505a" />
       </linearGradient>
       <linearGradient id="metal-ribbon" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#999" />
@@ -48,17 +66,24 @@
         <stop offset="0%" stop-color="#682424" />
         <stop offset="100%" stop-color="#411616" />
       </radialGradient>
+      <radialGradient id="sun" >
+        <stop offset="10%" stop-color="#ffbe67" />
+        <stop offset="80%" stop-color="#FFFC7F" />
+        <stop offset="100%" stop-color="#fffdb2" />
+      </radialGradient>
+      <filter id="shadow" x="-250" y="-100" width="500"  height="500">
+        <feGaussianBlur in="offsetResult" result="blurResult" stdDeviation="500"/>
 
+      </filter>
+      <filter id="sunBlur" width="120%"  height="120%">
+        <feGaussianBlur in="sourceGraphic" result="result" stdDeviation="5"/>
+
+      </filter>
     </defs>
     <!--<use id="waves-top" xlink:href="#waves" transform="translate(0,-20)" />-->
-    <g class="ship">
-      <g class="hull">
-        <path id="hull" d="M120 440 Q 30 390 20 330 Q260 370 500 360 Q 500 400 460 410 Q 435 420 430 440Z"/>
-        <path id="ribbon"  d="M25.5 350 Q261 390 496.5 380 Q 494.5 386, 490.5 392 Q 261.25 402 32 362 Q28 356 25.5 350Z"/>
-        <use class="buoy" width="60" height="60" x="80" y="340" xlink:href="#buoy"/>
-        <use class="buoy" width="60" height="60" x="380" y="358" xlink:href="#buoy"/>
-      </g>
-    </g>
+    <use class="ship" xlink:href="#ship" y="-10"/>
+    <circle r="50" cx="600" cy="80" fill="url(#sun)" filter="url(#sunBlur)"/>
+    <circle r="50" cx="600" cy="80" fill="url(#sun)" filter="url(#shadow)" />
     <!--<use id="waves-bottom" xlink:href="#waves" x="0" y="0" />-->
   </svg>
 </div>
