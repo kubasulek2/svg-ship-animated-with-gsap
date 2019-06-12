@@ -80,15 +80,23 @@ body {
   //animation: wave-top 6s infinite linear;
 }
 
-#ship{
+#ship {
 
-  #hull{
+  #hull {
     fill: url(#hull-paint);
   }
-  #ribbon{
+  #ribbon {
     fill: url(#metal-ribbon);
   }
-
+  #bulwark {
+    stroke: #333;
+    stroke-width: 3px;
+    fill: none;
+    path:last-child{
+      fill: #531c1c;
+      stroke: none;
+    }
+  }
 }
 #buoy{
    fill: none;
