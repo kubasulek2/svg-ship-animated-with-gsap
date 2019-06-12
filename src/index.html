@@ -18,6 +18,13 @@
   <symbol id="box" viewBox="0,0,50,50">
     <rect height="50" width="50" fill="red" />
   </symbol>
+  <symbol id="hull-window" viewBox="0,0,20,20">
+    <circle r="10" cx="10" cy="10"/>
+  </symbol>
+  <symbol id="cloud" viewBox="0,0,100,65">
+    <path d="M25 55 C30 55, 35 52, 40 50 C43 57 54 60 67 49 C80 60, 105 15, 70 24 C58 0, 30 5, 35 30 C10 12, 0 45,25 55Z"/>
+    <path d="M55 33 C63 34 64 40 58 43" transform="translate(17,-5)"/>
+  </symbol>
   <path id="waves" d="M 1440 400  L1440 450 L 0 450 L 0 400 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0" />
   <rect id="stripe" fill="var(--color-1)"/>
   <symbol id="buoy" viewBox="-50,-50, 100,100">
@@ -33,6 +40,9 @@
       <path id="ribbon"  d="M25.5 350 Q261 390 496.5 380 Q 494.5 386, 490.5 392 Q 261.25 402 32 362 Q28 356 25.5 350Z"/>
       <use class="buoy" width="60" height="60" x="80" y="340" xlink:href="#buoy"/>
       <use class="buoy" width="60" height="60" x="380" y="358" xlink:href="#buoy"/>
+      <use width="20" height="20" x="300" y="396" xlink:href="#hull-window"/>
+      <use width="20" height="20" x="265" y="394" xlink:href="#hull-window"/>
+      <use width="20" height="20" x="230" y="392" xlink:href="#hull-window"/>
     </g>
     <!--<animateTransform
             attributeName="transform"
@@ -71,20 +81,18 @@
         <stop offset="80%" stop-color="#FFFC7F" />
         <stop offset="100%" stop-color="#fffdb2" />
       </radialGradient>
-      <filter id="shadow" x="-250" y="-100" width="500"  height="500">
-        <feGaussianBlur in="offsetResult" result="blurResult" stdDeviation="500"/>
 
-      </filter>
-      <filter id="sunBlur" width="120%"  height="120%">
+      <filter id="sunBlur" x="0" y="0" width="120%"  height="120%">
         <feGaussianBlur in="sourceGraphic" result="result" stdDeviation="5"/>
 
       </filter>
     </defs>
-    <!--<use id="waves-top" xlink:href="#waves" transform="translate(0,-20)" />-->
+    <use id="waves-top" xlink:href="#waves" transform="translate(0,-20)" />
     <use class="ship" xlink:href="#ship" y="-10"/>
     <circle r="50" cx="600" cy="80" fill="url(#sun)" filter="url(#sunBlur)"/>
-    <circle r="50" cx="600" cy="80" fill="url(#sun)" filter="url(#shadow)" />
-    <!--<use id="waves-bottom" xlink:href="#waves" x="0" y="0" />-->
+    <use xlink:href="#cloud" width="200" height="120" x="30" y="-10"/>
+    <use xlink:href="#cloud" width="160" height="80" x="580" y="50"/>
+    <use id="waves-bottom" xlink:href="#waves" x="0" y="0" />
   </svg>
 </div>
 
