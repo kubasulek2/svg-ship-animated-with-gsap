@@ -92,9 +92,12 @@ body {
     stroke: #333;
     stroke-width: 3px;
     fill: none;
-    path:last-child{
+    path:last-of-type{
       fill: #531c1c;
       stroke: none;
+    }
+    use{
+      fill: black;
     }
   }
 }
@@ -118,5 +121,48 @@ body {
   fill: none;
   path:first-child{
     fill:white;
+  }
+}
+
+#superStructure{
+  #main{
+    width: 150px;
+    height: 130px;
+    fill: url(#building);
+
+  }
+  #roof{
+    width: 155px;
+    height: 10px;
+    fill: #DC6D6D;
+  }
+}
+#chimney{
+  polygon{
+    fill: url(#chimney-bg);
+    &:last-child{
+    fill:url(#chimney-stripe-bg);
+    }
+  }
+}
+
+#mast{
+
+  fill: #555;
+  polyline{
+    fill: none;
+    stroke: #888;
+    stroke-width: 3px;
+  }
+  polygon:last-of-type{
+    fill: #666;
+  }
+  rect{
+    width: 82px;
+    height: 5px;
+
+  }
+  circle{
+    fill: url(#chimney-stripe-bg);
   }
 }
