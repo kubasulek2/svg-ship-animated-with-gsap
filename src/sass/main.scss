@@ -1,3 +1,5 @@
+//css variable for overriding use element treat linked content as one element and applying one style for each.
+
 @keyframes wave-bottom {
   25%{
     transform: translateX(-37.5%) translateY(3%);
@@ -82,4 +84,20 @@ body {
   #hull{
     fill: url(#hull-paint);
   }
+  #ribbon{
+    fill: url(#metal-ribbon);
+  }
+
+}
+#buoy{
+   fill: none;
+   stroke: #eaeaea;
+   stroke-width: 20px;
+
+ }
+#stripe{
+  height: 20px;
+  width: 10px;
+  --color-1: red;
+  stroke: none;
 }
