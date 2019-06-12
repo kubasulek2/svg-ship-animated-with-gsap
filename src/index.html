@@ -29,19 +29,22 @@
       </linearGradient>
       <linearGradient id="sea-water-dark" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#5C8696" />
-        <stop offset="100%" stop-color="#405d69" />
+        <stop offset="100%" stop-color="#5b1f1f" />
       </linearGradient>
-      <radialGradient id="radial" cx="50%" cy="50%" r="50%" fx="70%" fy="70%">
-        <stop offset="0%" stop-color="white" />
-        <stop offset="100%" stop-color="#ECB218" />
+      <radialGradient id="hull-paint" cx="20%" cy="60%" r="100%" >
+        <stop offset="0%" stop-color="#682424" />
+        <stop offset="100%" stop-color="#411616" />
       </radialGradient>
 
     </defs>
-    <use id="waves-top" xlink:href="#waves" transform="translate(0,-20)" />
-    <g id="ship">
-
+    <!--<use id="waves-top" xlink:href="#waves" transform="translate(0,-20)" />-->
+    <g class="ship">
+      <g class="hull">
+        <path id="hull" d="M120 440 Q 30 390 20 330 Q260 370 500 360 Q 500 400 460 410 Q 435 420 430 440Z"/>
+        <path id="ribbon" stroke="red" d="M25.5 350 Q261 390 496.5 380"/>
+      </g>
     </g>
-    <use id="waves-bottom" xlink:href="#waves" x="0" y="0" />
+    <!--<use id="waves-bottom" xlink:href="#waves" x="0" y="0" />-->
   </svg>
 </div>
 

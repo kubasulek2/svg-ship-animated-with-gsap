@@ -64,16 +64,22 @@ body {
     height: auto;
     display: block;
 
+  }
+}
+#waves-bottom{
+  fill:url(#sea-water-light);
+  transform: translateX(-50%) translateY(0);
+  //animation: wave-bottom 5s infinite linear;
+}
+#waves-top{
+  transform: translateX(-50%) translateY(-8%);
+  fill: url(#sea-water-dark);
+  //animation: wave-top 7.5s infinite linear;
+}
 
-    #waves-bottom{
-      fill:url(#sea-water-light);
-      transform: translateX(-50%) translateY(0);
-      //animation: wave-bottom 5s infinite linear;
-    }
-    #waves-top{
-      transform: translateX(-50%) translateY(-8%);
-      fill: url(#sea-water-dark);
-      //animation: wave-top 7.5s infinite linear;
-    }
+.ship{
+
+  #hull{
+    fill: url(#hull-paint);
   }
 }
