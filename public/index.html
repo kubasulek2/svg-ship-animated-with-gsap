@@ -18,20 +18,30 @@
   <symbol id="box" viewBox="0,0,50,50">
     <rect height="50" width="50" fill="red" />
   </symbol>
+  <path id="waves" d="M 1440 400  L1440 450 L 0 450 L 0 400 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0" />
 </svg>
 <div class="container">
   <svg id="fluid" viewBox="0,0,720,450">
     <defs>
-      <linearGradient id="linear" x1="0" y1="0" x2="0" y2="1">
+      <linearGradient id="sea-water-light" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7c9eab" />
-      <stop offset="100%" stop-color="#5C8696" />
+      <stop offset="100%" stop-color="#496b78" />
+      </linearGradient>
+      <linearGradient id="sea-water-dark" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5C8696" />
+        <stop offset="100%" stop-color="#405d69" />
       </linearGradient>
       <radialGradient id="radial" cx="50%" cy="50%" r="50%" fx="70%" fy="70%">
         <stop offset="0%" stop-color="white" />
         <stop offset="100%" stop-color="#ECB218" />
       </radialGradient>
+
     </defs>
-   <path id="waves-bottom" d="M 1440 400  L1440 450 L 0 450 L 0 400 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0 c 40 -30,60 -40,80 0 c 12 20, 25 14, 40 0" />
+    <use id="waves-top" xlink:href="#waves" transform="translate(0,-20)" />
+    <g id="ship">
+
+    </g>
+    <use id="waves-bottom" xlink:href="#waves" x="0" y="0" />
   </svg>
 </div>
 

@@ -1,4 +1,4 @@
-@keyframes wave {
+@keyframes wave-bottom {
   25%{
     transform: translateX(-37.5%) translateY(3%);
   }
@@ -10,6 +10,26 @@
   }
   100%{
     transform: translateX(0) translateY(0);
+  }
+}
+@keyframes wave-top {
+  16.66%{
+    transform: translateX(-41.66%) translateY(-5%);
+  }
+  33.33%{
+    transform: translateX(-33.33%) translateY(-8%);
+  }
+  50%{
+    transform: translateX(-25%) translateY(-5%);
+  }
+  66.66%{
+    transform: translateX(-16.66%) translateY(-8%);
+  }
+  83.33%{
+    transform: translateX(-8.33%) translateY(-5%);
+  }
+  100%{
+    transform: translateX(0) translateY(-8%);
   }
 }
 *{
@@ -43,14 +63,17 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    //border: 1px solid royalblue;
 
 
     #waves-bottom{
-      stroke: none;
-      fill:url(#linear);
+      fill:url(#sea-water-light);
       transform: translateX(-50%) translateY(0);
-      animation: wave 5s infinite linear;
+      //animation: wave-bottom 5s infinite linear;
+    }
+    #waves-top{
+      transform: translateX(-50%) translateY(-8%);
+      fill: url(#sea-water-dark);
+      //animation: wave-top 7.5s infinite linear;
     }
   }
 }
