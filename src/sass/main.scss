@@ -72,12 +72,12 @@ body {
 #waves-bottom{
   fill:url(#sea-water-light);
   transform: translateX(-50%) translateY(0);
-  //animation: wave-bottom 5s infinite linear;
+  animation: wave-bottom 5s infinite linear;
 }
 #waves-top{
   transform: translateX(-50%) translateY(-4%);
   fill: url(#sea-water-dark);
-  //animation: wave-top 6s infinite linear;
+  animation: wave-top 6s infinite linear;
 }
 
 #ship {
@@ -136,6 +136,16 @@ body {
     height: 10px;
     fill: #DC6D6D;
   }
+  #aside{
+    fill: #555555;
+  }
+  #door{
+    rect{
+      height:100px;
+      width: 60px;
+      fill: #38436b;
+    }
+  }
 }
 #chimney{
   polygon{
@@ -149,11 +159,6 @@ body {
 #mast{
 
   fill: #555;
-  polyline{
-    fill: none;
-    stroke: #888;
-    stroke-width: 3px;
-  }
   polygon:last-of-type{
     fill: #666;
   }
@@ -165,4 +170,14 @@ body {
   circle{
     fill: url(#chimney-stripe-bg);
   }
+}
+.lines{
+  fill: none;
+  stroke: #888;
+  stroke-width: 2px;
+}
+#window{
+  stroke: #333;
+  stroke-width: 4px;
+  fill: url(#glass);
 }

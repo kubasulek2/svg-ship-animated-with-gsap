@@ -21,6 +21,9 @@
   <symbol id="hull-window" viewBox="0,0,20,20">
     <circle r="10" cx="10" cy="10"/>
   </symbol>
+  <symbol id="window" viewBox="0,0,20,20">
+    <circle r="7" cx="10" cy="10"/>
+  </symbol>
   <symbol id="cloud" viewBox="0,0,100,65">
     <path d="M25 55 C30 55, 35 52, 40 50 C43 57 54 60 67 49 C80 60, 105 15, 70 24 C58 0, 30 5, 35 30 C10 12, 0 45,25 55Z"/>
     <path d="M55 33 C63 34 64 40 58 43" transform="translate(17,-5)"/>
@@ -36,6 +39,7 @@
   </symbol>
   <circle id="small-black" r="5" cx="0" cy="0"/>
   <g id="ship">
+    <polyline  class="lines" points="20 299 228 157 305 124 424 191 508 326" />
     <g id="superStructure">
       <g id="chimney">
         <polygon points="360 380, 440 380, 425 190, 380 190, 360 260"/>
@@ -43,6 +47,15 @@
       </g>
       <rect id="main" x="230" y="260" ry="7" rx="7"/>
       <rect id="roof" x="227.5" y="255" ry="3" rx="3"/>
+      <path id="aside" d="M437 350 L435 324 L510 324 Q505 335  500 350Z" />
+      <g id="door">
+        <rect x="242" y="294" rx="14" ry="14"/>
+        <use xlink:href="#window" x="257" y="303" width="30" height="30" />
+        <use xlink:href="#window" x="306" y="296" width="25" height="25" />
+        <use xlink:href="#window" x="332" y="296" width="25" height="25" />
+        <polyline points="410 292 398 262  382 292" fill="none" stroke="#333" stroke-width="2"/>
+        <use xlink:href="#buoy" width="40px" height="40px" x="376" y="270"/>
+      </g>
     </g>
     <g class="hull">
       <path id="hull" d="M120 440 Q 30 390 20 330 Q260 370 500 360 Q 500 400 460 410 Q 435 420 430 440Z"/>
@@ -70,14 +83,13 @@
       <use width="20" height="20" x="265" y="394" xlink:href="#hull-window"/>
       <use width="20" height="20" x="230" y="392" xlink:href="#hull-window"/>
       <g id="mast">
-        <polyline points="" />
         <polygon class="first" points="297.5 255 302 130 305 130 305 255"/>
         <rect x="226" y="155" rx="2" ry="2"/>
         <polygon class="second" points="304 255 312.5 255 308 130 304 130"/>
         <circle r="7" cx="305" cy="124" />
       </g>
     </g>
-    <!--<animateTransform
+    <animateTransform
             attributeName="transform"
             dur="5s"
             type="rotate"
@@ -85,7 +97,7 @@
 
             fill="freeze"
             repeatCount="indefinite"
-    />-->
+    />
   </g>
 </svg>
 <div class="container">
@@ -126,6 +138,11 @@
         <stop offset="0%" stop-color="#5876a6" />
         <stop offset="100%" stop-color="#46679d" />
       </linearGradient>
+
+      <radialGradient id="glass" cx="40%" cy="40%" r="45%" >
+        <stop offset="0%" stop-color="white" />
+        <stop offset="100%" stop-color="#ccc" />
+      </radialGradient>
 
       <filter id="sunBlur" x="0" y="0" width="120%"  height="120%">
         <feGaussianBlur in="sourceGraphic" result="result" stdDeviation="5"/>
