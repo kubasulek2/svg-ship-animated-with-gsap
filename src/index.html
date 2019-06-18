@@ -43,7 +43,9 @@
     <g id="superStructure">
       <g id="chimney">
         <polygon points="360 380, 440 380, 425 190, 380 190, 360 260"/>
-        <polygon points="427 210, 374 210, 368.5 230, 428.5 230"/>
+				<polygon points="427 210, 374 210, 368.5 230, 428.5 230"/>
+				<ellipse class='smoke' cx='402' cy='172' rx='20' ry='12' />
+				<ellipse class='smoke' cx='402' cy='172' rx='20' ry='12' />
       </g>
       <rect id="main" x="230" y="260" ry="7" rx="7"/>
       <rect id="roof" x="227.5" y="255" ry="3" rx="3"/>
@@ -89,7 +91,7 @@
         <circle r="7" cx="305" cy="124" />
       </g>
     </g>
-    <animateTransform
+    <!-- <animateTransform
             attributeName="transform"
             dur="5s"
             type="rotate"
@@ -97,7 +99,7 @@
 
             fill="freeze"
             repeatCount="indefinite"
-    />
+    /> -->
   </g>
 </svg>
 <div class="container">
@@ -150,14 +152,14 @@
       </filter>
     </defs>
     <use id="waves-top" xlink:href="#waves" transform="translate(0,-20)" />
-    <use class="ship" xlink:href="#ship" y="-10"/>
     <circle r="50" cx="600" cy="80" fill="url(#sun)" filter="url(#sunBlur)"/>
     <use xlink:href="#cloud" width="200" height="120" x="30" y="-10"/>
     <use xlink:href="#cloud" width="160" height="80" x="580" y="50"/>
+    <use class="ship" xlink:href="#ship" y="-10"/>
     <use id="waves-bottom" xlink:href="#waves" x="0" y="0" />
   </svg>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 <script src="js/vendor/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
 </body>

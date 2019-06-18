@@ -1,4 +1,4 @@
-//css variable for overriding use element treat linked content as one element and applying one style for each.
+//css variable for overriding use element treating linked content as one element and applying one style for each.
 
 @keyframes wave-bottom {
   25%{
@@ -150,10 +150,20 @@ body {
 #chimney{
   polygon{
     fill: url(#chimney-bg);
-    &:last-child{
+    &:last-of-type{
     fill:url(#chimney-stripe-bg);
     }
-  }
+	}
+	.smoke{
+		fill: #888;
+		// stroke: #666;
+		// stroke-width: 1px;
+		opacity: 0.8;
+		&:last-child{
+			opacity: 0
+		}
+	}	
+	
 }
 
 #mast{
